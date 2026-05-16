@@ -18,3 +18,18 @@ public:
     void addDoctor(doctor*);
     void printDoctors();
 };
+
+class doctor {
+public:
+    std::string name;
+    std::vector<patient*> patient_list;
+
+    doctor(std::string pName) :name(pName) {
+        std::cout << "Doctor \"" << name << "\" exists\n";
+    }
+    ~doctor() {
+        std::cout << "Doctor \"" << name << "\" does not exist\n";
+    }
+    void addPatient(patient*);
+    void printPatients();
+};
