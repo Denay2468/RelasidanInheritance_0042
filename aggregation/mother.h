@@ -4,3 +4,18 @@
 #include <string>
 #include <vector>
 #include "child.h"
+
+class mother {
+public:
+    std::string name;
+    std::vector<child*> child_list;
+
+    mother(std::string pName) :name(pName) {
+        std::cout << "Mother \"" << name << "\" exists\n";
+    }
+    ~mother() {
+        std::cout << "Mother \"" << name << "\" does not exist\n";
+    }
+    void addChild(child*);
+    void printChildren();
+};
