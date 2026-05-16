@@ -19,3 +19,7 @@ public:
     void addChild(child*);
     void printChildren();
 };
+
+void mother::addChild(child* pChild) {
+    child_list.push_back(pChild);
+}
