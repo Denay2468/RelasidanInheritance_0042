@@ -18,3 +18,18 @@ public:
         return a + b;
     }
 };
+
+class student : public person {
+public:
+    string school;
+
+    student(string pName, string pSchool) : person(pName), school(pSchool) {
+        cout << "student created\n" << endl;
+    }
+    ~student() {
+        cout << "student deleted\n" << endl;
+    }
+    string introduction() {
+        return "Hello, my name is " + name + " from " + school + "\n";
+    }
+};
