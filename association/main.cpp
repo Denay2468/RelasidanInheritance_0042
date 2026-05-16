@@ -50,3 +50,11 @@ void doctor::addPatient(patient* pPatient) {
     patient_list.push_back(pPatient);
     pPatient->addDoctor(this);
 }
+
+void doctor::printPatients() {
+    cout << "List of Patients from doctor \"" << this->name << "\":\n";
+    for (auto& a : patient_list) {
+        cout << a->name << "\n";
+    }
+    cout << endl;
+}
