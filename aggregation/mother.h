@@ -23,3 +23,12 @@ public:
 void mother::addChild(child* pChild) {
     child_list.push_back(pChild);
 }
+
+void mother::printChildren() {
+    std::cout << "Child list of Mother \"" << this->name << "\":\n";
+    for (int i = 0; i < child_list.size(); i++) {
+        std::cout << child_list[i]->name << std::endl;
+    }
+    std::cout << std::endl;
+}
+#endif
