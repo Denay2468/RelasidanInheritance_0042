@@ -33,3 +33,7 @@ public:
     void addPatient(patient*);
     void printPatients();
 };
+
+void patient::addDoctor(doctor* pDoctor) {
+    doctor_list.push_back(pDoctor);
+}
