@@ -33,3 +33,11 @@ public:
         return "Hello, my name is " + name + " from " + school + "\n";
     }
 };
+
+int main() {
+    student student1("andi laksono", "SMAN 1 Bantul");
+    cout << student1.introduction();
+    cout << "Result = " << student1.sum(10, 90) << endl;
+
+    return 0;
+}
