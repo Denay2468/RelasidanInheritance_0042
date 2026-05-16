@@ -45,3 +45,8 @@ void patient::printDoctors() {
     }
     cout << endl;
 }
+
+void doctor::addPatient(patient* pPatient) {
+    patient_list.push_back(pPatient);
+    pPatient->addDoctor(this);
+}
