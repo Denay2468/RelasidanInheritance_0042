@@ -58,3 +58,26 @@ void doctor::printPatients() {
     }
     cout << endl;
 }
+
+int main() {
+    doctor* varDoctor1 = new doctor("dr.Budi");
+    doctor* varDoctor2 = new doctor("dr.Tono");
+    patient* varPatient1 = new patient("Andi");
+    patient* varPatient2 = new patient("Lia");
+
+    varDoctor1->addPatient(varPatient1);
+    varDoctor1->addPatient(varPatient2);
+    varDoctor2->addPatient(varPatient1);
+
+    varDoctor1->printPatients();
+    varDoctor2->printPatients();
+    varPatient1->printDoctors();
+    varPatient2->printDoctors();
+
+    delete varPatient1;
+    delete varPatient2;
+    delete varDoctor1;
+    delete varDoctor2;
+
+    return 0;
+}
