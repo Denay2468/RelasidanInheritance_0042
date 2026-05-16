@@ -37,3 +37,11 @@ public:
 void patient::addDoctor(doctor* pDoctor) {
     doctor_list.push_back(pDoctor);
 }
+
+void patient::printDoctors() {
+    cout << "List of Doctors handling patient \"" << this->name << "\":\n";
+    for (auto& a : doctor_list) {
+        cout << a->name << "\n";
+    }
+    cout << endl;
+}
